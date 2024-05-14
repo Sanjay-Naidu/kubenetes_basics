@@ -1,0 +1,8 @@
+Step 1:  Use 'az group create' to create a resource group.
+
+az group create --name kubeResourceGroup --location eastus
+
+
+Step 2:  Use 'az network vnet create' command  to create virtual network with name as shophomevnet with the address prefix of 192.168.0.0/16  and a subnet named shophomesubnet with the address prefix 192.168.1.0/24.
+
+az network vnet create --resource-group kubeResourceGroup --name shophomevnet --address-prefixes 192.168.0.0/16 --subnet-name shophomesubnet --subnet-prefix 192.168.1.0/24
